@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>H5</title>
+    <script src="../js/jquery/jquery-1.10.2.min.js"></script>
+    <script>
+        $(function () {
+            var nameList = ['李白', '杜甫', '王维'];
+            nameList.forEach(function (v) {
+                console.log(v);
+                $("#names").append('<option value="' + v + '"></option>');
+            })
+        })
+    </script>
+</head>
+<body>
+<div>
+    <input id="name" list="names" placeholder="请输入姓名">
+    <datalist id="names">
+    </datalist>
+</div>
+</body>
+</html>

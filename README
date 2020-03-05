@@ -1,0 +1,47 @@
+VueLearn
+vue是一套构建用户界面的渐进式框架。
+Vue.js比angular.js简单很多很多
+
+英文单词：
+component 组件，元件 [kəm'pəʊnənt]
+
+2019-08-23
+1.数据绑定 {{name}} 与angular.js一样双大括号Mustache语法
+2.方法调用 {{method()}} {{method(1)}} {{method('凯撒')}}
+3.指令：
+    v-html 输出Html代码
+    v-html="paramName"
+
+    v-bind
+
+4.v-model 与 ng-model类似
+5.v-bind v-on:click @click
+6.console.log(vueObj.$data.name)
+7.v-bind:class="{'class1':use}",如果为 true 使用 class1 类的样式，否则不使用该类：
+8.指令的概念 是带有v-前缀的特殊属性
+ v-if v-bind
+
+蚂蚁课堂Vue学习
+------------------------------------------------------------------------------------------------------------------------
+el：定位挂载元素 (一般都是用ID选择器，用类选择器 标签选择器都行)
+data:数据源
+
+插值表达式{{}}
+v-text="myName" 设置标签内容 防止xss攻击
+v-html="myUrl"
+
+绑定事件
+v-on=""
+v-on:click=""
+@click=""
+@dblclick="" 双击
+
+v-model ng-model
+
+
+axios 阿克谁哦死
+包装了ajax
+
+跨域请求报错
+解决跨域方案
+Access to XMLHttpRequest at 'http://localhost:8888/toAddFact?code=1' from origin 'http://localhost:63342' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.

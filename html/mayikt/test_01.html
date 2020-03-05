@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>VueLearn</title>
+    <script src="../../js/jquery/jquery-1.10.2.min.js"></script>
+    <script src="../../js/vue/vue.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="../../js/mayikt/test_01.js"></script>
+</head>
+<body>
+<div id="vueObj">
+    {{myName}}
+    <p v-text="myName"></p>
+    <p v-html="myUrl"></p>
+    <button v-on:click='myAlert()'>点一下</button>
+    <button @click='myAlert()'>点一下</button>
+    <button @dblclick='myAlert()'>双击</button>
+
+    <button @dblclick='myVmodel()'>可见</button>
+    <input v-model="seen">
+    <button @dblclick='postRequest()'>双击发送请求</button>
+    <button @dblclick='getRequest()'>双击发送get请求</button>
+</div>
+</body>
+</html>

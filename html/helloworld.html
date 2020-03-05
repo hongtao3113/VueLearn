@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>VueLearn</title>
+    <script src="../js/vue/vue.min.js"></script>
+    <script src="../js/jquery/jquery-1.10.2.min.js"></script>
+    <link rel="stylesheet" href="../css/xcConfirm.css"/>
+    <script src="../js/common/xcConfirm.js"></script>
+    <script src="../js/helloworld.js"></script>
+    <link href="../css/helloworld.css" type="text/css" rel="stylesheet"/>
+    <script>
+        //控制台输出去除
+        Vue.config.productionTip = false
+    </script>
+</head>
+<body>
+<div id="box">
+
+    <!--与angular.js用法相同 双大括号Mustache语法-->
+    <p>{{description}}</p>
+
+    <!--方法调用-->
+    <p>{{getEmail('1357760345@qq.com')}}</p>
+
+    <!-- v-html输出html code-->
+    <p v-html="htmlCode"></p>
+
+    <!-- v-bind绑定 为true使用该style；v-model与ng-model用法相同 -->
+    <label for="r1">修改颜色</label><input type="checkbox" v-model="use" id="r1">
+    <p v-bind:class="{'class1':use}">{{description}}</p>
+
+    <!--{{支持js表达式}} -->
+    <p>{{use?'yes':'no'}}</p>
+
+    <pre><p><a v-bind:href="url" target="_blank">百度一下</a></p></pre>
+    <p>
+        <button v-on:click="getMessage()">确认</button>
+    </p>
+        <p v-if="seen">与ng-show类似</p>
+</div>
+</body>
+</html>
