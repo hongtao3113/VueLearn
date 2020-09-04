@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VueLearn</title>
+    <link rel="stylesheet" type="text/css" href="../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../css/theme/index.css">
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/theme/index.css">
+    <script src="../js/vue/vue.min.js"></script>
+    <script src="../js/vue/index.js"></script>
+    <script src="../js/jquery/jquery-1.10.2.min.js"></script>
+</head>
+<body>
+<div id="app">1111111112222
+    {{name}}
+    <el-date-picker v-model="dueDate" type="date"
+                    placeholder="请选择票据包到期日"
+                    :picker-options="dueDatePickerOptions"
+                    style="width: 100%">
+    </el-date-picker>
+</div>
+</body>
+<script>
+    var vm = new Vue({
+        el: "#app",
+        data: {
+            name: '时间选择器',
+            dueDate: '',
+            dueDatePickerOptions: {
+                disabledDate: function (time) {
+                    //今天之后的日期
+                    //指定日期不可选
+                    let arr = [new Date("2020/09/05").getTime(), new Date("2020/09/06").getTime(), new Date("2020/09/07").getTime()];
+                    let temp = time.getTime();
+                    return temp < Date.now() || arr.indexOf(temp) >= 0;
+                }
+            },
+        },
+        methods: {}
+    })
+</script>
+</html>
